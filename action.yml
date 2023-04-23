@@ -1,0 +1,12 @@
+name: 'Scheduled Pull Request Notifier'
+description: 'Twice A day it sends a notification regarding pending PR reviews'
+inputs:
+  webhooks:
+    description: 'Secrets'
+    required: true
+  token:
+    description: "The Action's GitHub Token"
+    required: true
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
