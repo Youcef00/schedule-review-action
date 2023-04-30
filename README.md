@@ -16,11 +16,12 @@ This action sends a Google Chat message to the specified space notified the spec
 *Note*: It is recommended to the use the GitHub Action's token and enabling read/write access in the repository settings under `Settings > Actions > General > Workflow permissions`  
 
 ## Example usage
+The example bellow notifies the users every business day at 9 a.m and 2 p.m
 
 ```yaml
 on:
-  pull_request:
-    types: [ review_requested ]
+  schedule:
+    cron: '0 9,14 * * MON-FRI'
 
 jobs:
   scheduled-PR-notification:

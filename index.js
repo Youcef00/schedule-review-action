@@ -17,8 +17,6 @@ async function sendScheduledMessage() {
     });
 
     const token = core.getInput('token');
-    const owner = core.getInput('owner');
-    const repository = core.getInput('repository');
 
     const octokit = new Octokit({
         auth: token
